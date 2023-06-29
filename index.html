@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -18,19 +20,19 @@
       <h1>World Clock</h1>
       <select name="citys" id="citys">
         <option value="">Select a city</option>
-        <option value="london">London</option>
-        <option value="losangeles">Los Angeles</option>
-        <option value="sydney">Sydney</option>
+        <option value="london">London 🇬🇧</option>
+        <option value="losangeles">Los Angeles 🇺🇸</option>
+        <option value="sydney">Sydney 🇦🇺</option>
       </select>
-      <div class="city">
-        <h2>Paris</h2>
-        <div class="date">August 8th 2023</div>
-        <div class="time">1:48:15 AM</div>
+      <div class="city" id="paris">
+        <h2>Paris 🇫🇷</h2>
+        <div class="date"></div>
+        <div class="time"></div>
       </div>
-      <div class="city">
-        <h2>Moscow</h2>
-        <div class="date">August 8th 2023</div>
-        <div class="time">1:48:15 AM</div>
+      <div class="city" id="moscow">
+        <h2>Moscow 🇷🇺</h2>
+        <div class="date"></div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
