@@ -23,6 +23,9 @@ function updateIndexTime() {
 
 function cityTimeChange(event) {
   let timeZone = event.target.value;
+  if (timeZone === "current") {
+    timeZone = moment.tz.guess();
+  }
   let cityTimeZone = moment().tz(timeZone);
   let cityName = timeZone.replace("_", " ").split("/")[1];
   let worldClock = document.querySelector("#indexCities");
@@ -30,7 +33,11 @@ function cityTimeChange(event) {
          <div class="city">
           <h2>${cityName}</h2>
           <div class="date">${cityTimeZone.format("Do MMMM YYYY")}</div>
-          <div class="time">${cityTimeZone.format("LTS")}</div>`;
+          <div class="time">${cityTimeZone.format("LTS")}</div>
+          <a href="index.html"> Homepage </a>`;
+  setTimeout(() => {
+    cityTimeChange(event);
+  }, 1000);
 }
 
 updateIndexTime();
